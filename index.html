@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnovateX Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+            color: #333;
+            overflow-x: hidden;
+        }
+        .dark-mode {
+            background: #121212;
+            color: #f9f9f9;
+        }
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #ff6b6b, #556270);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero h2 {
+            font-size: 2.5rem;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: rgba(85, 98, 112, 0.9);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: 0.3s ease-in-out;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .nav-links a:hover {
+            color: #ffeb3b;
+        }
+        /* Sections */
+        section {
+            padding: 60px;
+            text-align: center;
+        }
+        .animate {
+            animation: slideIn 1s ease-in-out;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            AOS.init();
+            document.getElementById("dark-mode-toggle").addEventListener("click", () => {
+                document.body.classList.toggle("dark-mode");
+            });
+        });
+    </script>
+</head>
+<body>
+    <header class="hero" data-aos="fade-up">
+        <nav>
+            <h1>InnovateX Solutions</h1>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button id="dark-mode-toggle">🌙</button>
+        </nav>
+        <h2>Empowering Businesses with Cutting-Edge Solutions</h2>
+        <p>Your success is our priority.</p>
+        <a href="#contact" class="btn">Get Started</a>
+    </header>
+    <section id="about" class="animate" data-aos="fade-up">
+        <h2>About Us</h2>
+        <p>We transform businesses with digital excellence.</p>
+    </section>
+    <section id="services" class="animate" data-aos="fade-up">
+        <h2>Our Services</h2>
+        <p>Web Development, SEO, Branding, and Digital Marketing.</p>
+    </section>
+    <section id="testimonials" class="animate" data-aos="fade-up">
+        <h2>What Clients Say</h2>
+        <p>"Exceptional service and outstanding results!" - John Doe</p>
+    </section>
+    <section id="blog" class="animate" data-aos="fade-up">
+        <h2>Latest Insights</h2>
+        <div class="blog-post"><h3>SEO Best Practices</h3><p>Boost your site ranking effectively.</p></div>
+        <div class="blog-post"><h3>Web Design Tips</h3><p>Modern strategies for a stellar website.</p></div>
+    </section>
+    <section id="contact" class="animate" data-aos="fade-up">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 InnovateX Solutions. All rights reserved.</p>
+    </footer>
+</body>
+</html>
